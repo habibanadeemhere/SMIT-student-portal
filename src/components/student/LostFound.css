@@ -1,0 +1,643 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Outfit:wght@300;400;500;600;700&display=swap");
+
+.lf-root {
+  font-family: "Outfit", sans-serif;
+  background: #f4f7fb;
+  min-height: 100vh;
+}
+
+.lf-top-accent {
+  height: 4px;
+  background: linear-gradient(90deg, #0057a8 0%, #66b032 50%, #0057a8 100%);
+  background-size: 200% 100%;
+  animation: slideGrad 3s linear infinite;
+}
+@keyframes slideGrad {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+/* HEADER */
+.lf-header {
+  background: #fff;
+  border-bottom: 2px solid #e8eef6;
+  box-shadow: 0 2px 16px rgba(0, 87, 168, 0.08);
+  padding: 0 2.5rem;
+}
+.lf-header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 66px;
+}
+.lf-logo-ring {
+  width: 60px;
+  height: 42px;
+  border-radius: 50%;
+  padding: 4px;
+  
+  flex-shrink: 0;
+}
+.lf-logo-ring img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  display: block;
+}
+.lf-header-title {
+  font-family: "Cinzel", serif;
+  font-size: 15px;
+  font-weight: 900;
+  color: #0057a8;
+  letter-spacing: 0.07em;
+}
+.lf-header-sub {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #66b032;
+  margin-top: 1px;
+}
+.lf-divider-v {
+  width: 1px;
+  height: 32px;
+  background: #e0e8f0;
+  margin: 0 4px;
+}
+.lf-smit-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #f0f9e8;
+  border: 1.5px solid #c8e8a0;
+  border-radius: 8px;
+  padding: 5px 12px;
+}
+.lf-smit-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #66b032;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.4);
+  }
+}
+.lf-smit-label {
+  font-size: 11px;
+  font-weight: 800;
+  color: #3a8a10;
+  letter-spacing: 0.15em;
+}
+.lf-page-tag {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: #f0f9e8;
+  border: 1.5px solid #c8e8a0;
+  border-radius: 8px;
+  padding: 5px 14px;
+}
+.lf-page-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #66b032;
+  animation: pulse 2s infinite;
+}
+.lf-page-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #3a8a10;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* MAIN */
+.lf-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 4rem;
+}
+
+/* HERO */
+.lf-hero {
+  margin-bottom: 2.5rem;
+  animation: fadeUp 0.6s ease both;
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.lf-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: #f0f9e8;
+  border: 1.5px solid #c8e8a0;
+  border-radius: 50px;
+  padding: 4px 14px 4px 9px;
+  margin-bottom: 0.8rem;
+}
+.lf-hero-eyedot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #66b032;
+  animation: pulse 2s infinite;
+}
+.lf-hero-title {
+  font-family: "Cinzel", serif;
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+  font-weight: 900;
+  color: #0057a8;
+  margin: 0 0 6px;
+}
+.lf-hero-title span {
+  color: #66b032;
+}
+.lf-hero-sub {
+  font-size: 14px;
+  color: #7a8fa8;
+}
+.lf-glow-sep {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #66b032, #0057a8);
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+
+/* LAYOUT */
+.lf-grid {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .lf-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* FORM */
+.lf-form-card {
+  background: #fff;
+  border-radius: 22px;
+  padding: 2rem;
+  border: 1.5px solid #e4edf8;
+  box-shadow: 0 8px 32px rgba(0, 87, 168, 0.09);
+  position: sticky;
+  top: 90px;
+  animation: fadeUp 0.6s ease 0.1s both;
+  overflow: hidden;
+}
+.lf-form-top-bar {
+  height: 4px;
+  background: linear-gradient(90deg, #66b032, #0057a8);
+  margin: -2rem -2rem 1.6rem;
+}
+.lf-form-title {
+  font-family: "Cinzel", serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0057a8;
+  margin: 0 0 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.lf-form-title-icon {
+  width: 34px;
+  height: 34px;
+  background: #f0f9e8;
+  border: 1.5px solid #c8e8a0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.lf-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 1rem;
+}
+.lf-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #0057a8;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.lf-input,
+.lf-select,
+.lf-textarea {
+  width: 100%;
+  border: 1.5px solid #e4edf8;
+  border-radius: 12px;
+  padding: 11px 14px;
+  font-family: "Outfit", sans-serif;
+  font-size: 14px;
+  color: #1a2a3a;
+  background: #fafcff;
+  outline: none;
+  transition:
+    border-color 0.25s,
+    box-shadow 0.25s;
+}
+.lf-input:focus,
+.lf-select:focus,
+.lf-textarea:focus {
+  border-color: #66b032;
+  box-shadow: 0 0 0 3px rgba(102, 176, 50, 0.12);
+  background: #fff;
+}
+.lf-textarea {
+  height: 100px;
+  resize: none;
+}
+.lf-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2366b032' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+}
+
+/* Status toggle */
+.lf-status-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.lf-status-btn {
+  padding: 10px;
+  border-radius: 12px;
+  border: 1.5px solid #e4edf8;
+  background: #fafcff;
+  font-family: "Outfit", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.lf-status-btn.lost-active {
+  background: #fff5f5;
+  border-color: #fca5a5;
+  color: #dc2626;
+}
+.lf-status-btn.found-active {
+  background: #f0f9e8;
+  border-color: #c8e8a0;
+  color: #3a8a10;
+}
+.lf-status-btn:not(.lost-active):not(.found-active) {
+  color: #7a8fa8;
+}
+
+.lf-submit-btn {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  font-family: "Outfit", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 0.5rem;
+}
+.lf-submit-btn.mode-new {
+  background: linear-gradient(135deg, #66b032, #4a9e1a);
+  box-shadow: 0 6px 20px rgba(102, 176, 50, 0.3);
+}
+.lf-submit-btn.mode-edit {
+  background: linear-gradient(135deg, #0057a8, #0071cc);
+  box-shadow: 0 6px 20px rgba(0, 87, 168, 0.28);
+}
+.lf-submit-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+}
+.lf-cancel-btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  background: #f4f7fb;
+  border: 1.5px solid #e4edf8;
+  border-radius: 12px;
+  color: #7a8fa8;
+  font-family: "Outfit", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.lf-cancel-btn:hover {
+  background: #e8eef6;
+  color: #0057a8;
+}
+
+/* ITEMS SECTION */
+.lf-items-section {
+  animation: fadeUp 0.6s ease 0.2s both;
+}
+.lf-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.4rem;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.lf-section-title {
+  font-family: "Cinzel", serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0057a8;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.lf-count-badge {
+  background: #f0f9e8;
+  border: 1.5px solid #c8e8a0;
+  border-radius: 50px;
+  padding: 3px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #3a8a10;
+}
+
+/* FILTER TABS */
+.lf-filter-tabs {
+  display: flex;
+  gap: 6px;
+}
+.lf-tab {
+  padding: 5px 14px;
+  border-radius: 50px;
+  border: 1.5px solid #e4edf8;
+  background: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #7a8fa8;
+}
+.lf-tab.active-all {
+  background: #eef5ff;
+  border-color: #c0d8f5;
+  color: #0057a8;
+}
+.lf-tab.active-lost {
+  background: #fff5f5;
+  border-color: #fca5a5;
+  color: #dc2626;
+}
+.lf-tab.active-found {
+  background: #f0f9e8;
+  border-color: #c8e8a0;
+  color: #3a8a10;
+}
+
+.lf-items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 1.4rem;
+}
+
+/* ITEM CARD */
+.lf-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 1.5rem;
+  border: 1.5px solid #e4edf8;
+  box-shadow: 0 4px 16px rgba(0, 87, 168, 0.07);
+  transition:
+    transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.3s,
+    border-color 0.25s;
+  position: relative;
+  overflow: hidden;
+  animation: fadeUp 0.5s ease both;
+}
+.lf-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(102, 176, 50, 0.13);
+  border-color: #66b032;
+}
+.lf-card-bar-lost {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #dc2626, #f87171);
+  border-radius: 18px 18px 0 0;
+}
+.lf-card-bar-found {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #66b032, #a0d840);
+  border-radius: 18px 18px 0 0;
+}
+
+.lf-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  gap: 8px;
+}
+.lf-card-title {
+  font-family: "Cinzel", serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #0d1f35;
+  margin: 0;
+}
+.lf-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 50px;
+  padding: 3px 10px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.lf-status-pill.lost {
+  background: #fff5f5;
+  color: #dc2626;
+  border-color: #fca5a5;
+}
+.lf-status-pill.found {
+  background: #f0f9e8;
+  color: #3a8a10;
+  border-color: #c8e8a0;
+}
+.pill-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.lf-card-meta {
+  font-size: 12px;
+  color: #7a8fa8;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+.lf-meta-dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #c0d0e0;
+}
+.lf-card-desc {
+  font-size: 13.5px;
+  color: #4a5e72;
+  line-height: 1.65;
+  margin-bottom: 10px;
+}
+
+.lf-campus-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #eef5ff;
+  border: 1px solid #c0d8f5;
+  border-radius: 50px;
+  padding: 3px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #0057a8;
+}
+
+.lf-action-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #f0f4fa;
+}
+.lf-btn-edit {
+  flex: 1;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1.5px solid #f0c040;
+  background: #fffbee;
+  color: #b07800;
+  font-family: "Outfit", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.lf-btn-edit:hover {
+  background: #f0c040;
+  color: #fff;
+  transform: translateY(-1px);
+}
+.lf-btn-delete {
+  flex: 1;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1.5px solid #fca5a5;
+  background: #fff5f5;
+  color: #dc2626;
+  font-family: "Outfit", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.lf-btn-delete:hover {
+  background: #dc2626;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.lf-empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #9ab0c8;
+}
+.lf-empty-icon {
+  width: 60px;
+  height: 60px;
+  background: #f0f9e8;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+.lf-empty-title {
+  font-family: "Cinzel", serif;
+  font-size: 16px;
+  color: #0057a8;
+  margin-bottom: 6px;
+}
+.lf-empty-sub {
+  font-size: 13px;
+}

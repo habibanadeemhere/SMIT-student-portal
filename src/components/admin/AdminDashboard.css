@@ -1,0 +1,440 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Outfit:wght@300;400;500;600;700&display=swap");
+
+.adm-root {
+  font-family: "Outfit", sans-serif;
+  background: #f4f7fb;
+  min-height: 100vh;
+}
+
+.adm-top-accent {
+  height: 4px;
+  background: linear-gradient(90deg, #0057a8 0%, #66b032 50%, #0057a8 100%);
+  background-size: 200% 100%;
+  animation: slideGrad 3s linear infinite;
+}
+@keyframes slideGrad {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.4);
+  }
+}
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* HEADER */
+.adm-header {
+  background: #fff;
+  border-bottom: 2px solid #e8eef6;
+  box-shadow: 0 2px 16px rgba(0, 87, 168, 0.08);
+  padding: 0 2.5rem;
+}
+.adm-header-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 68px;
+}
+.adm-logo-ring {
+  width: 60px;
+  height: 50x;
+  border-radius: 50%;
+  padding: 4px;
+  flex-shrink: 0;
+}
+.adm-logo-ring img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  display: block;
+}
+.adm-header-title {
+  font-family: "Cinzel", serif;
+  font-size: 15px;
+  font-weight: 900;
+  color: #0057a8;
+  letter-spacing: 0.07em;
+}
+.adm-header-sub {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #66b032;
+  margin-top: 1px;
+}
+.adm-divider-v {
+  width: 1px;
+  height: 32px;
+  background: #e0e8f0;
+  margin: 0 4px;
+}
+.adm-smit-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #f0f9e8;
+  border: 1.5px solid #c8e8a0;
+  border-radius: 8px;
+  padding: 5px 12px;
+}
+.adm-smit-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #66b032;
+  animation: pulse 2s infinite;
+}
+.adm-smit-label {
+  font-size: 11px;
+  font-weight: 800;
+  color: #3a8a10;
+  letter-spacing: 0.15em;
+}
+
+/* ADMIN BADGE */
+.adm-admin-badge {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: linear-gradient(135deg, #0057a8, #0071cc);
+  border-radius: 10px;
+  padding: 6px 16px;
+  box-shadow: 0 4px 14px rgba(0, 87, 168, 0.25);
+}
+.adm-admin-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #66b032;
+  animation: pulse 2s infinite;
+}
+.adm-admin-label {
+  font-size: 11px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* MAIN */
+.adm-main {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 4rem;
+}
+
+/* HERO */
+.adm-hero {
+  margin-bottom: 2.8rem;
+  animation: fadeUp 0.6s ease both;
+}
+.adm-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: #eef5ff;
+  border: 1.5px solid #c0d8f5;
+  border-radius: 50px;
+  padding: 4px 14px 4px 9px;
+  margin-bottom: 0.8rem;
+}
+.adm-hero-eyedot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #0057a8;
+  animation: pulse 2s infinite;
+}
+.adm-hero-title {
+  font-family: "Cinzel", serif;
+  font-size: clamp(1.6rem, 3vw, 2.6rem);
+  font-weight: 900;
+  color: #0057a8;
+  margin: 0 0 6px;
+}
+.adm-hero-title span {
+  color: #66b032;
+}
+.adm-hero-sub {
+  font-size: 14px;
+  color: #7a8fa8;
+}
+.adm-glow-sep {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #0057a8, #66b032);
+  border-radius: 4px;
+  margin: 1rem 0 0;
+}
+
+/* STATS CARDS */
+.adm-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.8rem;
+  margin-bottom: 2.5rem;
+}
+
+.adm-card {
+  background: #fff;
+  border-radius: 22px;
+  padding: 1.8rem;
+  border: 1.5px solid #e4edf8;
+  box-shadow: 0 4px 20px rgba(0, 87, 168, 0.07);
+  text-decoration: none;
+  transition:
+    transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.35s,
+    border-color 0.3s;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  animation: fadeUp 0.6s ease both;
+}
+.adm-card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+.adm-card-shimmer {
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 40%;
+  height: 200%;
+  background: linear-gradient(
+    105deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  transition: left 0.5s ease;
+  pointer-events: none;
+}
+.adm-card:hover .adm-card-shimmer {
+  left: 120%;
+}
+
+.adm-card-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 22px 22px 0 0;
+}
+
+/* Number counter */
+.adm-card-count {
+  font-family: "Cinzel", serif;
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1;
+  margin: 0.8rem 0 0.4rem;
+  animation: countUp 0.8s ease both;
+}
+
+.adm-card-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #4a5e72;
+  margin-bottom: 1.2rem;
+}
+
+.adm-card-icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  margin-bottom: 0.2rem;
+}
+.adm-card:hover .adm-card-icon-wrap {
+  transform: scale(1.15) rotate(-6deg);
+}
+
+.adm-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid #f0f4fa;
+  margin-top: 0.5rem;
+}
+.adm-card-tag {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 50px;
+  border: 1px solid;
+}
+.adm-card-arrow {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  transition: gap 0.25s;
+}
+.adm-card:hover .adm-card-arrow {
+  gap: 8px;
+}
+
+/* BOTTOM SECTION */
+.adm-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.8rem;
+}
+@media (max-width: 700px) {
+  .adm-bottom {
+    grid-template-columns: 1fr;
+  }
+}
+
+.adm-info-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 1.6rem;
+  border: 1.5px solid #e4edf8;
+  box-shadow: 0 4px 16px rgba(0, 87, 168, 0.06);
+  animation: fadeUp 0.6s ease 0.4s both;
+}
+.adm-info-title {
+  font-family: "Cinzel", serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #0057a8;
+  margin: 0 0 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.adm-info-title-icon {
+  width: 30px;
+  height: 30px;
+  background: #eef5ff;
+  border: 1.5px solid #c0d8f5;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.adm-quick-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1.5px solid #e4edf8;
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: all 0.2s;
+  background: #fafcff;
+}
+.adm-quick-link:hover {
+  border-color: #0057a8;
+  background: #eef5ff;
+  transform: translateX(4px);
+}
+.adm-quick-link-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.adm-quick-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.adm-quick-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a2a3a;
+}
+.adm-quick-arrow {
+  color: #b0c4d8;
+  transition:
+    color 0.2s,
+    transform 0.2s;
+}
+.adm-quick-link:hover .adm-quick-arrow {
+  color: #0057a8;
+  transform: translateX(3px);
+}
+
+/* ACTIVITY */
+.adm-activity-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f4fa;
+}
+.adm-activity-row:last-child {
+  border-bottom: none;
+}
+.adm-activity-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.adm-activity-text {
+  font-size: 13px;
+  color: #4a5e72;
+  flex: 1;
+}
+.adm-activity-text strong {
+  color: #0d1f35;
+  font-weight: 700;
+}
+.adm-activity-count {
+  font-family: "Cinzel", serif;
+  font-size: 16px;
+  font-weight: 700;
+}
